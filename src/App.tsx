@@ -2,7 +2,8 @@
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import TreasureTrackPage from './pages/TreasureTrackPage'
 import { AuthPage } from './components/AuthPage'
-import { Toaster } from "@/components/ui/sonner"
+import { Toaster } from "sonner";
+
 
 function App() {
   const navigate = useNavigate()
