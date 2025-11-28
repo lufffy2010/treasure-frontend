@@ -10,7 +10,7 @@ console.log("API URL =", import.meta.env.VITE_API_URL);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter basename="/TreasureTrack">
+    <BrowserRouter>
       <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
         <App />
       </ThemeProvider>
