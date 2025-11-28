@@ -1,0 +1,19 @@
+// XP Sync Patch for Dashboard.tsx
+// Add this code after line 237 (after setUserData(newData);)
+
+    // Sync XP to database
+    try {
+      const token = localStorage.getItem('token');
+      if (token && newData.xp !== undefined) {
+        await fetch('http://localhost:3001/api/auth/xp', {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          },
+          body: JSON.stringify({ xp: newData.xp })
+        });
+      }
+    } catch (error) {
+      console.error('Failed to sync XP to database:', error);
+    }
