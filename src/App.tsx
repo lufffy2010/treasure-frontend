@@ -4,6 +4,7 @@ import TreasureTrackPage from './pages/TreasureTrackPage'
 import { AuthPage } from './components/AuthPage'
 import { Toaster } from "sonner";
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       </Routes>
       <Toaster />
       <Analytics />
+      <SpeedInsights />
     </div>
   )
 }
