@@ -3,6 +3,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import TreasureTrackPage from './pages/TreasureTrackPage'
 import { AuthPage } from './components/AuthPage'
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/react"
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="*" element={<AuthPage onAuth={() => navigate('/treasure')} />} />
       </Routes>
       <Toaster />
+      <Analytics />
     </div>
   )
 }
