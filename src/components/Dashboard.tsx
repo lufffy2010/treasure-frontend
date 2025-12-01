@@ -69,7 +69,7 @@ export const Dashboard = () => {
   useEffect(() => {
     if (isMobileSidebarOpen || selectedDate) {
       if (!historyStatePushed) {
-        window.history.pushState({ uiOpen: true }, '');
+        window.history.pushState({ uiOpen: true }, '', window.location.pathname);
         setHistoryStatePushed(true);
       }
     } else {
