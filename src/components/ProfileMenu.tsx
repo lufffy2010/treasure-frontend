@@ -51,7 +51,7 @@ export const ProfileMenu = ({ onUpdate }: ProfileMenuProps) => {
     };
 
     if (isOpen && !historyPushed) {
-      window.history.pushState({ dialogOpen: true }, '');
+      window.history.pushState({ dialogOpen: true }, '', window.location.pathname);
       setHistoryPushed(true);
       window.addEventListener('popstate', handlePopState);
     }
