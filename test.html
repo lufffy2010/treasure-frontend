@@ -1,0 +1,26 @@
+<!-- public/test.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Direct HTML</title>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script>
+        console.log('✅ Direct HTML test loaded');
+        document.getElementById('root').innerHTML = `
+            <div style="
+                padding: 50px;
+                background: green;
+                color: white;
+                font-size: 24px;
+            ">
+                ✅ DIRECT HTML WORKING!
+                <br/>
+                React problem hai
+            </div>
+        `;
+    </script>
+</body>
+</html>
